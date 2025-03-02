@@ -10,16 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Logo</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
-                        class="fas fa-bars"> Project</i></a>
+            <nav class="navbar">
+                <div class="nav-wrapper">
+                  <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Project</a>
+                  <ul class="right hide-on-med-and-down">
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{url_for('home')}}">Home</a></li>
                     <li><a href="{{url_for('page_1')}}">Page 1</a></li>
@@ -36,7 +37,7 @@
             <li><a href="{{url_for('page_3')}}">Page 3</a></li>
         </ul>
     </header>
-    <main class="container">
+    <main>
         {% block content %}
         {% endblock %}
     </main>
